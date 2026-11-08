@@ -1,0 +1,4 @@
+language_human = {
+	type = language
+	trait_group = language_group_human
+}

@@ -1,0 +1,4 @@
+heritage_human = {
+	type  = heritage
+	trait_group = heritage_group_human 
+}

@@ -1,0 +1,3 @@
+heritage_group_human = {
+	type = heritage
+}

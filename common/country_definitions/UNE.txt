@@ -1,0 +1,7 @@
+﻿UNE = {
+    color = {51 167 255}
+    country_type = recognized
+    tier = hegemony
+    cultures = {human}
+    capital = STATE_OROMIA 
+}

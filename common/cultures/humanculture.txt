@@ -1,0 +1,26 @@
+human = {
+	color = rgb{227 155 150}
+	religion = atheist
+    heritage = heritage_human
+    language = language_human
+    
+    male_common_first_names = {
+        John
+        Arthur
+        William
+    }
+    female_common_first_names = {
+        Mary
+        Elizabeth
+        Jane
+    }
+    common_last_names = {
+        Smith
+        Taylor
+    }
+    
+    ethnicities = {
+        1 = caucasian
+    }
+    graphics = european
+}
