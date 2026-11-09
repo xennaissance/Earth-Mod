@@ -1,0 +1,1 @@
+objective_tutorial = {visible = { always = no }}

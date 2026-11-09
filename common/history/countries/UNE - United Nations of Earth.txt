@@ -1,14 +1,12 @@
 COUNTRIES = {
 	c:UNE ?= {
+		set_country_flavor_text = "UNE_flavor_text"
 		set_next_election_date = 1836.12.7
-
 		set_tax_level = low
-		
 		effect_starting_technology_tier_1_tech = yes
-		
-		set_market_capital = STATE_NEW_YORK		
-				
+		set_market_capital = STATE_NEW_YORK
 		effect_starting_politics_liberal = yes
+		activate_law = law_type:law_parliamentary_republic
 		activate_law = law_type:law_public_schools
 		activate_law = law_type:law_legacy_slavery
 		activate_law = law_type:law_multicultural
@@ -20,24 +18,19 @@ COUNTRIES = {
 		activate_law = law_type:law_no_workers_rights
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_national_militia
-		activate_law = law_type:law_local_police
-		activate_law = law_type:law_no_womens_rights # Women couldn't hold property until ~1839
+		activate_law = law_type:law_dedicated_police
+		activate_law = law_type:law_no_womens_rights		# Women couldn't hold property until ~1839
 		activate_law = law_type:law_technocracy
-				
 		set_institution_investment_level = {
 			institution = institution_schools
-			level = 1
+			level = 3
 		}
-
 		set_institution_investment_level = {
 			institution = institution_police
-			level = 1
+			level = 5
 		}
-
 		ig:ig_industrialists ?= {
 			add_ruling_interest_group = yes
 		}
-
-
 	}
 }

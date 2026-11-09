@@ -1,0 +1,17 @@
+human_standard_of_living_modifier_positive = {
+}
+
+human_standard_of_living_modifier_negative = {
+}
+
+human_cultural_acceptance_modifier_positive = {
+}
+
+human_cultural_acceptance_modifier_negative = {
+}
+
+human_fervor_target_modifier_positive = {
+}
+
+human_fervor_target_modifier_negative = {
+}

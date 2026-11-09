@@ -1,0 +1,6 @@
+# 1. We leave these completely empty so the engine deletes the default versions
+objective_economic_dominance = {visible = { always = no }}
+
+objective_hegemon = {visible = { always = no }}
+
+objective_egalitarian_society = {visible = { always = no }}

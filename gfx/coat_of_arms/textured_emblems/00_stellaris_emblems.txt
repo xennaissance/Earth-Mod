@@ -1,0 +1,6 @@
+# gfx/coat_of_arms/textured_emblems/_stellaris_emblems.txt
+
+# This registers your PNG file so Victoria 3 knows it exists
+textured_emblem = {
+	texture = "flag_human_9.dds"
+}

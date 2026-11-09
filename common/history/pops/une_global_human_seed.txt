@@ -1,0 +1,12 @@
+POPS = {
+	# Scopes to every state region on the world map on Day 0
+	every_state = {
+		every_scope_pop = {
+			# Triggers standard historical conversion before the game loads the map
+			change_pop_culture = {
+				target = cu:human
+				value = 0.001
+			}
+		}
+	}
+}

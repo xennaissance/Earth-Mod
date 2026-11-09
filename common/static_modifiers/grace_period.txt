@@ -1,0 +1,10 @@
+# A massive administrative safety net that fades over time
+empire_integration_grace_period = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds"
+	
+	# Removes the population-scaled state costs
+	state_bureaucracy_population_base_cost_factor_mult = -1.0
+	
+	# Removes the massive Bureaucracy costs from active institutions completely
+	country_bureaucracy_investment_cost_factor_mult = -1.0
+}

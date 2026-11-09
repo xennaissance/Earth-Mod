@@ -1,0 +1,8 @@
+#you must define new colors in common/named_colors to use them here
+UNE_socialist = {
+	color = "swr_red"
+	possible = {
+		c:UNE ?= this
+		has_law_or_variant = law_type:law_council_republic 
+	}
+}

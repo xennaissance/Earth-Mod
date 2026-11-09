@@ -1,0 +1,12 @@
+UNE_default = { # The country tag (e.g., FRA for France)
+    pattern = "pattern_solid.tga" # The basic background split
+    color1 = "blue"
+    
+    textured_emblem = { # Adds an icon layer on top
+        texture = "flag_human_9.dds"
+        instance = {
+            position = { 0.5 0.5 } # Centers the crown (X and Y coordinates from 0 to 1)
+            scale = { 0.6 0.6 }    # Resizes the icon
+        }
+    }
+}
