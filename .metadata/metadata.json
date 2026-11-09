@@ -1,15 +1,1 @@
-  {
-    "name" : "United Nations of Earth",                     
-    "id" : "https://github.com/xennaissance/Earth-Mod",            
-    "version" : "1.0",                    
-    "game_id" : "victoria3",              
-    "supported_game_version" : "1.15",   
-    "short_description" : "Best mod!",    
-    "tags" : ["province", "fix"],        
-    "relationships" : [                 
-        
-    ],                 
-    "game_custom_data" : {                
-      "multiplayer_synchronized" : true   
-    }
-  }
+{"name":"[1.15] United Nations of Earth","id":"https://github.com/xennaissance/Earth-Mod","version":"1.0","game_id":"victoria3","supported_game_version":"1.15","short_description":"Best mod!","tags":["province","fix"],"relationships":[]}
