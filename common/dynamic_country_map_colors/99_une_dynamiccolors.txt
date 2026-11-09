@@ -1,10 +1,71 @@
-#you must define new colors in common/named_colors to use them here
-# you can use coa_def_ideology_triggers here, look at /common/dynamic_country_map_colors/00_default.txt
+# you must define new colors in common/named_colors to use them here
+# Entries are listed in priority order (communist/fascist, theocracy, autocracy, monarchy)
+# in case this file resolves overlaps by order. Picking a skin blocks every other entry;
+# picking UNE_skin blocks them all so UNE keeps its normal colour.
+
 UNE_socialist = {
 	color = "swr_red"
 	possible = {
 		c:UNE ?= this
-		has_law_or_variant = law_type:law_council_republic
+		AND = {
+			OR = {
+				has_law_or_variant = law_type:law_council_republic
+				has_game_rule = SWR_skin
+			}
+			NOT = {
+				OR = {
+					has_game_rule = UCF_skin
+					has_game_rule = IOM_skin
+					has_game_rule = COM_skin
+					has_game_rule = EarthKingdom_skin
+					has_game_rule = UNE_skin
+				}
+			}
+		}
+	}
+}
+
+UNE_fascist = {
+	color = "UnitedCitizenFederationBlue"
+	possible = {
+		c:UNE ?= this
+		AND = {
+			OR = {
+				coa_def_fascist_flag_trigger = yes
+				has_game_rule = UCF_skin
+			}
+			NOT = {
+				OR = {
+					has_game_rule = SWR_skin
+					has_game_rule = IOM_skin
+					has_game_rule = COM_skin
+					has_game_rule = EarthKingdom_skin
+					has_game_rule = UNE_skin
+				}
+			}
+		}
+	}
+}
+
+UNE_theocracy = {
+	color = "RaptorImperialis"
+	possible = {
+		c:UNE ?= this
+		AND = {
+			OR = {
+				coa_def_theocracy_flag_trigger = yes
+				has_game_rule = IOM_skin
+			}
+			NOT = {
+				OR = {
+					has_game_rule = SWR_skin
+					has_game_rule = UCF_skin
+					has_game_rule = COM_skin
+					has_game_rule = EarthKingdom_skin
+					has_game_rule = UNE_skin
+				}
+			}
+		}
 	}
 }
 
@@ -14,40 +75,49 @@ UNE_autocratic = {
 		c:UNE ?= this
 		AND = {
 			OR = {
-				has_law_or_variant = law_type:law_autocracy
-				has_law_or_variant = law_type:law_single_party_state
+				AND = {
+					OR = {
+						has_law_or_variant = law_type:law_autocracy
+						has_law_or_variant = law_type:law_single_party_state
+					}
+					OR = {
+						has_law_or_variant = law_type:law_presidential_republic
+						has_law_or_variant = law_type:law_parliamentary_republic
+					}
+				}
+				has_game_rule = COM_skin
 			}
-
-			OR = {
-				has_law_or_variant = law_type:law_presidential_republic
-				has_law_or_variant = law_type:law_parliamentary_republic
+			NOT = {
+				OR = {
+					has_game_rule = SWR_skin
+					has_game_rule = UCF_skin
+					has_game_rule = IOM_skin
+					has_game_rule = EarthKingdom_skin
+					has_game_rule = UNE_skin
+				}
 			}
 		}
 	}
 }
 
-
-UNE_fascist = {
-	color = "UnitedCitizenFederationBlue"
-	possible = {
-		c:UNE ?= this
-		coa_fascist_trigger = yes
-	}
-}
-
 UNE_monarchy = {
 	color = "earth_kingdom_green"
-
 	possible = {
 		c:UNE ?= this
-		coa_monarchy_trigger = yes
-	}
-}
-
-UNE_theocracy = {
-	color = "RaptorImperialis"
-	possible ={
-		c:UNE ?= this
-		coa_theocracy_trigger = yes
+		AND = {
+			OR = {
+				coa_def_monarchy_flag_trigger = yes
+				has_game_rule = EarthKingdom_skin
+			}
+			NOT = {
+				OR = {
+					has_game_rule = SWR_skin
+					has_game_rule = UCF_skin
+					has_game_rule = IOM_skin
+					has_game_rule = COM_skin
+					has_game_rule = UNE_skin
+				}
+			}
+		}
 	}
 }

@@ -1,52 +1,138 @@
 UNE = {
-	#definitions for flags go here
+	# definitions for flags go here
 	# the actual flags go to common/coat_of_arms/coat_of_arms
-	#dynamic naming happens at common/dynamic_country_names
+	# dynamic naming happens at common/dynamic_country_names
 	flag_definition = {
 		coa = socialist_world_republic
-		priority = 1500
+		priority = 3000
 		trigger = {
-			coa_def_communist_flag_trigger = yes
+			AND = {
+				OR = {
+					has_game_rule = SWR_skin
+					coa_def_communist_flag_trigger = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = UCF_skin
+						has_game_rule = IOM_skin
+						has_game_rule = COM_skin
+						has_game_rule = EarthKingdom_skin
+						has_game_rule = UNE_skin
+					}
+				}
+			}
 		}
 	}
 	flag_definition = {
 		coa = united_citizen_federation
-		priority = 2000
+		priority = 3000
 		trigger = {
-				coa_def_fascist_flag_trigger = yes
-			
-			
-		}
-	}
-	flag_definition = {
-		coa = TPG_earth_kingdom
-		priority = 500
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
+			AND = {
+				OR = {
+					has_game_rule = UCF_skin
+					coa_def_fascist_flag_trigger = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = SWR_skin
+						has_game_rule = IOM_skin
+						has_game_rule = COM_skin
+						has_game_rule = EarthKingdom_skin
+						has_game_rule = UNE_skin
+					}
+				}
+			}
 		}
 	}
 	flag_definition = {
 		coa = imperium_of_man
-		priority = 1500
+		priority = 3000
 		trigger = {
-			coa_def_theocracy_flag_trigger = yes
+			AND = {
+				OR = {
+					has_game_rule = IOM_skin
+					coa_def_theocracy_flag_trigger = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = SWR_skin
+						has_game_rule = UCF_skin
+						has_game_rule = COM_skin
+						has_game_rule = EarthKingdom_skin
+						has_game_rule = UNE_skin
+					}
+				}
+			}
 		}
 	}
 	flag_definition = {
 		coa = commonwealth_of_man
+		priority = 3000
+		trigger = {
+			AND = {
+				OR = {
+					has_game_rule = COM_skin
+					coa_def_dictatorship_flag_trigger = yes
+					coa_def_fascist_flag_trigger = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = SWR_skin
+						has_game_rule = UCF_skin
+						has_game_rule = IOM_skin
+						has_game_rule = EarthKingdom_skin
+						has_game_rule = UNE_skin
+					}
+				}
+			}
+		}
+	}
+	flag_definition = {
+		coa = TPG_earth_kingdom
 		priority = 1500
 		trigger = {
-			OR = {
-				coa_def_dictatorship_flag_trigger = yes
-				coa_def_fascist_flag_trigger = yes
+			AND = {
+				OR = {
+					has_game_rule = EarthKingdom_skin
+					coa_def_monarchy_flag_trigger = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = SWR_skin
+						has_game_rule = UCF_skin
+						has_game_rule = IOM_skin
+						has_game_rule = COM_skin
+						has_game_rule = UNE_skin
+					}
+				}
 			}
 		}
 	}
 	flag_definition = {
 		coa = UNE_default
-		priority = 1
+		priority = 1000
 		trigger = {
-			always = yes
+			AND = {
+				OR = {
+					has_game_rule = UNE_skin
+					AND = {
+						coa_def_republic_flag_trigger = yes
+						coa_def_dictatorship_flag_trigger = no
+						coa_def_autocracy_flag_trigger = no
+						coa_def_fascist_flag_trigger = no
+						coa_def_communist_flag_trigger = no
+					}
+				}
+				NOT = {
+					OR = {
+						has_game_rule = SWR_skin
+						has_game_rule = UCF_skin
+						has_game_rule = IOM_skin
+						has_game_rule = COM_skin
+						has_game_rule = EarthKingdom_skin
+					}
+				}
+			}
 		}
 	}
 }

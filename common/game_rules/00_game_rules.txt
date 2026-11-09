@@ -419,3 +419,21 @@ welfare_system = {
 		flag = UNEoldagepension
 	}
 }
+
+skins = {
+	default = no_skin
+	no_skin = {
+	}
+	UNE_skin = {
+	}
+	SWR_skin = {
+	}
+	COM_skin = {
+	}
+	IOM_skin = {
+	}
+	EarthKingdom_skin = {
+	}
+	UCF_skin = {
+	}
+}

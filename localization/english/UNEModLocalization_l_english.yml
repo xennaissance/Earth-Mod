@@ -161,6 +161,23 @@
   setting_wage_subsidies_desc: "$law_wage_subsidies_desc$"
   setting_old_age_pension: "Old Age Pension"
   setting_old_age_pension_desc: "$law_old_age_pension_desc$"
+  # === SKINS SYSTEM ===
+  rule_skins: "UNE: Skin / Theme Override"
+  setting_no_skin: "No Skin Override"
+  setting_no_skin_desc: "The UNE will have the skin (map-color, flag, and country name) that matches it's ideological, economic, and legal setup."
+  setting_UNE_skin: "United Nations of Earth"
+  setting_UNE_skin_desc: "The UNE will have the default, light blue, democratic United Nations of Earth theme no matter what."
+  setting_SWR_skin: "Socialist World Republic"
+  setting_SWR_skin_desc: "The UNE will be known as the Socialist World Republic forever more, regardless of what anyone or any law says."
+  setting_COM_skin: "Commonwealth of Man"
+  setting_COM_skin_desc: "The UNE will have the Commonwealth of Man skin no matter what laws or ideology."
+  setting_IOM_skin: "Imperium of Man"
+  setting_IOM_skin_desc: "In the grim darkness of the far future, there is only war, and the Imperium of Man, which will exist no matter what laws or ideology."
+  setting_EarthKingdom_skin: "Earth Kingdom"
+  setting_EarthKingdom_skin_desc: "There's no war in Ba-Sing-Se, just as there is no law or ideology that will get rid of this UNE skin."
+  setting_UCF_skin: "United Citizen Federation"
+  setting_UCF_skin_desc: "I'm doing my part! As in, I'm preventing any skin but the UCF from being applied to the UNE!"
+
 
   #=== Dynamic UNE names ===#
   UNE: "United Nations of Earth"

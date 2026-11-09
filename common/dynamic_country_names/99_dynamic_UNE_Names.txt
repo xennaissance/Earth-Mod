@@ -1,60 +1,137 @@
 UNE = {
+	# Same priority ladder as the flag definitions. Plain numbers only.
+	# Each name/adjective key needs a localization entry.
 	dynamic_country_name = {
 		name = dyn_c_UNE_socialist
 		adjective = UNE_ADJ
-
-		is_main_tag_only = yes
-		priority = 1000
-
+		priority = 3000
 		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
-
-	dynamic_country_name = {
-		name = dyn_c_UNE_fascist
-		adjective = UNE_ADJ
-
-		priority = 1000
-
-		trigger = {
-			coa_def_fascist_flag_trigger = yes
-		}
-	}
-
-	dynamic_country_name = {
-		name = dyn_c_UNE_monarchy
-		adjective = UNE_ADJ
-
-		priority = 50
-
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
-
-	dynamic_country_name = {
-		name = dyn_c_UNE_autocracy
-		adjective = UNE_ADJ
-
-		priority = 100
-
-		trigger = {
-			coa_def_dictatorship_flag_trigger = yes
-			NOT = {
-				coa_def_fascist_trigger = yes
+			AND = {
+				OR = {
+					has_game_rule = SWR_skin
+					coa_def_communist_flag_trigger = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = UCF_skin
+						has_game_rule = IOM_skin
+						has_game_rule = COM_skin
+						has_game_rule = EarthKingdom_skin
+						has_game_rule = UNE_skin
+					}
+				}
 			}
 		}
 	}
-
+	dynamic_country_name = {
+		name = dyn_c_UNE_fascist
+		adjective = UNE_ADJ
+		priority = 3000
+		trigger = {
+			AND = {
+				OR = {
+					has_game_rule = UCF_skin
+					coa_def_fascist_flag_trigger = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = SWR_skin
+						has_game_rule = IOM_skin
+						has_game_rule = COM_skin
+						has_game_rule = EarthKingdom_skin
+						has_game_rule = UNE_skin
+					}
+				}
+			}
+		}
+	}
 	dynamic_country_name = {
 		name = dyn_c_UNE_theocracy
 		adjective = UNE_ADJ
-
-		priority = 100
-
+		priority = 3000
 		trigger = {
-			coa_def_theocracy_flag_trigger = yes
+			AND = {
+				OR = {
+					has_game_rule = IOM_skin
+					coa_def_theocracy_flag_trigger = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = SWR_skin
+						has_game_rule = UCF_skin
+						has_game_rule = COM_skin
+						has_game_rule = EarthKingdom_skin
+						has_game_rule = UNE_skin
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_UNE_autocracy
+		adjective = UNE_ADJ
+		priority = 3000
+		trigger = {
+			AND = {
+				OR = {
+					has_game_rule = COM_skin
+					coa_def_dictatorship_flag_trigger = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = SWR_skin
+						has_game_rule = UCF_skin
+						has_game_rule = IOM_skin
+						has_game_rule = EarthKingdom_skin
+						has_game_rule = UNE_skin
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_UNE_monarchy
+		adjective = UNE_ADJ
+		priority = 3000
+		trigger = {
+			AND = {
+				OR = {
+					has_game_rule = EarthKingdom_skin
+					coa_def_monarchy_flag_trigger = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = SWR_skin
+						has_game_rule = UCF_skin
+						has_game_rule = IOM_skin
+						has_game_rule = COM_skin
+						has_game_rule = UNE_skin
+					}
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = UNE
+		adjective = UNE_ADJ
+		is_main_tag_only = yes
+		priority = 3000
+		trigger = {
+			AND = {
+				OR = {
+					has_game_rule = UNE_skin
+					always = yes
+				}
+				NOT = {
+					OR = {
+						has_game_rule = SWR_skin
+						has_game_rule = UCF_skin
+						has_game_rule = IOM_skin
+						has_game_rule = COM_skin
+						has_game_rule = EarthKingdom_skin
+					}
+				}
+			}
 		}
 	}
 }
