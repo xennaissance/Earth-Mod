@@ -1,0 +1,4 @@
+colors = {
+	UnitedCitizenFederationBlue =  rgb{26 43 60}
+	RaptorImperialis = rgb{153 0 0}
+}

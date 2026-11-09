@@ -8,3 +8,9 @@ empire_integration_grace_period = {
 	# Removes the massive Bureaucracy costs from active institutions completely
 	country_bureaucracy_investment_cost_factor_mult = -1.0
 }
+
+
+empire_mandate_growth = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds"
+	power_bloc_mandate_progress_mult = 10000
+}

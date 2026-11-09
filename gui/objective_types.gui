@@ -181,12 +181,12 @@ types objective_types
 					widget = {
 						layoutpolicy_horizontal = expanding
 						layoutpolicy_vertical = preferred
-						maximumsize = { 600 600 }
+						maximumsize = { 1024 1024 }
 						visible = "[Not(GameSetup.HasSelectedObjective)]"
 
 						background = {
-							texture = "gfx/interface/icons/objectives/icon_medallion_on_dark_1.png"
-							fittype = fit
+							texture = "gfx/loadingscreens/victoria3_load_7.dds"
+							fittype = centercrop
 							using = frame_small_mask
 						}
 

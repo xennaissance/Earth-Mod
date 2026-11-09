@@ -3,16 +3,38 @@ on_game_started = {
 	on_actions = {
 		earth_mod_clear_military_on_action
 		earth_law_making
-		
 	}
 }
 
 on_game_started_after_lobby = {
 	on_actions = {
 		earth_warning_event
-		
+		earth_law_making
 	}
-    
+}
+
+on_power_bloc_formed = {
+	on_actions = {
+		earth_power_bloc
+	}
+}
+
+earth_power_bloc = {
+	effect = {
+		c:UNE ?= {
+			if = {
+				limit = {
+					has_power_bloc = yes
+				}
+				power_bloc = {
+					add_modifier = {
+						name = empire_mandate_growth
+						years = -1
+					}
+				}
+			}
+		}
+	}
 }
 
 earth_mod_clear_military_on_action = {
@@ -76,93 +98,371 @@ earth_create_humans = {
 
 earth_warning_event = {
 	effect = {
-        every_country = {
-            limit = {
-                is_player = yes
-            }
-            trigger_event = { id = UNE.1 popup = yes }
-        }
-    }
+		every_country = {
+			limit = {
+				is_player = yes
+			}
+			trigger_event = {
+				id = UNE.1
+				popup = yes
+			}
+		}
+	}
 }
 
 earth_law_making = {
 	effect = {
 		c:UNE ?= {
 			# === GOVERNANCE PRINCIPLES ===
-			if = { limit = { has_game_rule = monarchy }              activate_law = law_type:law_monarchy }
-			if = { limit = { has_game_rule = theocracy }             activate_law = law_type:law_theocracy }
-			if = { limit = { has_game_rule = presidential_republic } activate_law = law_type:law_presidential_republic }
-			if = { limit = { has_game_rule = council_republic }      activate_law = law_type:law_council_republic }
-			if = { limit = { has_game_rule = corporate_state }       activate_law = law_type:law_corporate_state }
-			if = { limit = { has_game_rule = social_monarchy }       activate_law = law_type:law_social_monarchy }
+			if = {
+				limit = {
+					has_game_rule = parliamentary_republic
+				}
+				activate_law = law_type:law_parliamentary_republic
+			}
+			if = {
+				limit = {
+					has_game_rule = monarchy
+				}
+				activate_law = law_type:law_monarchy
+			}
+			if = {
+				limit = {
+					has_game_rule = theocracy
+				}
+				activate_law = law_type:law_theocracy
+			}
+			if = {
+				limit = {
+					has_game_rule = presidential_republic
+				}
+				activate_law = law_type:law_presidential_republic
+			}
+			if = {
+				limit = {
+					has_game_rule = council_republic
+				}
+				activate_law = law_type:law_council_republic
+			}
+			if = {
+				limit = {
+					has_game_rule = corporate_state
+				}
+				activate_law = law_type:law_corporate_state
+			}
+			if = {
+				limit = {
+					has_game_rule = social_monarchy
+				}
+				activate_law = law_type:law_social_monarchy
+			}
 
+			
 			# === ECONOMIC SYSTEM ===
-			if = { limit = { has_game_rule = command_economy }       activate_law = law_type:law_command_economy }
-			if = { limit = { has_game_rule = cooperative_ownership }   activate_law = law_type:law_cooperative_economy }
-			if = { limit = { has_game_rule = laissez_faire }         activate_law = law_type:law_laissez_faire }
-			if = { limit = { has_game_rule = agrarianism }           activate_law = law_type:law_agrarianism }
+			if = {
+				limit = {
+					has_game_rule = interventionism
+				}
+				activate_law = law_type:law_interventionism
+			}
 
+			if = {
+				limit = {
+					has_game_rule = command_economy
+				}
+				activate_law = law_type:law_command_economy
+			}
+			if = {
+				limit = {
+					has_game_rule = cooperative_ownership
+				}
+				activate_law = law_type:law_cooperative_economy
+			}
+			if = {
+				limit = {
+					has_game_rule = laissez_faire
+				}
+				activate_law = law_type:law_laissez_faire
+			}
+			if = {
+				limit = {
+					has_game_rule = agrarianism
+				}
+				activate_law = law_type:law_agrarianism
+			}
 			# === DISTRIBUTION OF POWER ===
-			if = { limit = { has_game_rule = autocracy }             activate_law = law_type:law_autocracy }
-			if = { limit = { has_game_rule = oligarchy }             activate_law = law_type:law_oligarchy }
-			if = { limit = { has_game_rule = landed_voting }         activate_law = law_type:law_landed_voting }
-			if = { limit = { has_game_rule = wealth_voting }         activate_law = law_type:law_wealth_voting }
-			if = { limit = { has_game_rule = census_voting }         activate_law = law_type:law_census_voting }
-			if = { limit = { has_game_rule = universal_voting }      activate_law = law_type:law_universal_voting }
-			if = { limit = { has_game_rule = single_party_state }    activate_law = law_type:law_single_party_state }
-			if = { limit = { has_game_rule = labor_suffrage }        activate_law = law_type:law_labour_suffrage }
-
+			if = {
+				limit = {
+					has_game_rule = technocracy
+				}
+				activate_law = law_type:law_technocracy
+			}
+			if = {
+				limit = {
+					has_game_rule = autocracy
+				}
+				activate_law = law_type:law_autocracy
+			}
+			if = {
+				limit = {
+					has_game_rule = oligarchy
+				}
+				activate_law = law_type:law_oligarchy
+			}
+			if = {
+				limit = {
+					has_game_rule = landed_voting
+				}
+				activate_law = law_type:law_landed_voting
+			}
+			if = {
+				limit = {
+					has_game_rule = wealth_voting
+				}
+				activate_law = law_type:law_wealth_voting
+			}
+			if = {
+				limit = {
+					has_game_rule = census_voting
+				}
+				activate_law = law_type:law_census_voting
+			}
+			if = {
+				limit = {
+					has_game_rule = universal_voting
+				}
+				activate_law = law_type:law_universal_voting
+			}
+			if = {
+				limit = {
+					has_game_rule = single_party_state
+				}
+				activate_law = law_type:law_single_party_state
+			}
+			if = {
+				limit = {
+					has_game_rule = labor_suffrage
+				}
+				activate_law = law_type:law_labour_suffrage
+			}
 			# === LAND REFORM ===
-			if = { limit = { has_game_rule = tenant_farmers }              activate_law = law_type:law_tenant_farmers }
-			if = { limit = { has_game_rule = collectivized_agriculture }   activate_law = law_type:law_collectivized_agriculture }
-			if = { limit = { has_game_rule = commercialized_agriculture }  activate_law = law_type:law_commercialized_agriculture }
-		
+			if = {
+				limit = {
+					has_game_rule = homesteading
+				}
+				activate_law = law_type:law_homesteading
+			}
+			if = {
+				limit = {
+					has_game_rule = tenant_farmers
+				}
+				activate_law = law_type:law_tenant_farmers
+			}
+			if = {
+				limit = {
+					has_game_rule = collectivized_agriculture
+				}
+				activate_law = law_type:law_collectivized_agriculture
+			}
+			if = {
+				limit = {
+					has_game_rule = commercialized_agriculture
+				}
+				activate_law = law_type:law_commercialized_agriculture
+			}
 			# === TAXATION ===
-			if = { limit = { has_game_rule = consumption_based_taxation } activate_law = law_type:law_consumption_based_taxation }
-			if = { limit = { has_game_rule = land_based_taxation }        activate_law = law_type:law_land_based_taxation }
-			if = { limit = { has_game_rule = per_capita_based_taxation }  activate_law = law_type:law_per_capita_based_taxation }
-			if = { limit = { has_game_rule = proportional_taxation }      activate_law = law_type:law_proportional_taxation }
-			if = { limit = { has_game_rule = graduated_taxation }         activate_law = law_type:law_graduated_taxation }
- 
+			if = {
+				limit = {
+					has_game_rule = consumption_based_taxation
+				}
+				activate_law = law_type:law_consumption_based_taxation
+			}
+			if = {
+				limit = {
+					has_game_rule = land_based_taxation
+				}
+				activate_law = law_type:law_land_based_taxation
+			}
+			if = {
+				limit = {
+					has_game_rule = per_capita_based_taxation
+				}
+				activate_law = law_type:law_per_capita_based_taxation
+			}
+			if = {
+				limit = {
+					has_game_rule = proportional_taxation
+				}
+				activate_law = law_type:law_proportional_taxation
+			}
+			if = {
+				limit = {
+					has_game_rule = graduated_taxation
+				}
+				activate_law = law_type:law_graduated_taxation
+			}
 			# === SLAVERY ===
-			if = { limit = { has_game_rule = slavery_banned }     activate_law = law_type:law_slavery_banned }
-			if = { limit = { has_game_rule = colonial_slavery }   activate_law = law_type:law_colonial_slavery }
-			if = { limit = { has_game_rule = debt_slavery }       activate_law = law_type:law_debt_slavery }
-			if = { limit = { has_game_rule = slave_trade }        activate_law = law_type:law_slave_trade }
-			if = { limit = { has_game_rule = legacy_slavery }     activate_law = law_type:law_legacy_slavery }
- 
+			if = {
+				limit = {
+					has_game_rule = slavery_banned
+				}
+				activate_law = law_type:law_slavery_banned
+			}
+			if = {
+				limit = {
+					has_game_rule = colonial_slavery
+				}
+				activate_law = law_type:law_colonial_slavery
+			}
+			if = {
+				limit = {
+					has_game_rule = debt_slavery
+				}
+				activate_law = law_type:law_debt_slavery
+			}
+			if = {
+				limit = {
+					has_game_rule = slave_trade
+				}
+				activate_law = law_type:law_slave_trade
+			}
+			if = {
+				limit = {
+					has_game_rule = legacy_slavery
+				}
+				activate_law = law_type:law_legacy_slavery
+			}
 			# === RIGHTS OF WOMEN ===
-			if = { limit = { has_game_rule = no_womens_rights }        activate_law = law_type:law_no_womens_rights }
-			if = { limit = { has_game_rule = women_own_property }      activate_law = law_type:law_women_own_property }
-			if = { limit = { has_game_rule = women_in_the_workplace }  activate_law = law_type:law_women_in_the_workplace }
-			if = { limit = { has_game_rule = womens_suffrage }         activate_law = law_type:law_womens_suffrage }
- 
+			if = {
+				limit = {
+					has_game_rule = no_womens_rights
+				}
+				activate_law = law_type:law_no_womens_rights
+			}
+			if = {
+				limit = {
+					has_game_rule = women_own_property
+				}
+				activate_law = law_type:law_women_own_property
+			}
+			if = {
+				limit = {
+					has_game_rule = women_in_the_workplace
+				}
+				activate_law = law_type:law_women_in_the_workplace
+			}
+			if = {
+				limit = {
+					has_game_rule = womens_suffrage
+				}
+				activate_law = law_type:law_womens_suffrage
+			}
 			# === CHILDREN'S RIGHTS ===
-			if = { limit = { has_game_rule = child_labor_allowed }         activate_law = law_type:law_child_labor_allowed }
-			if = { limit = { has_game_rule = restricted_child_labor }      activate_law = law_type:law_restricted_child_labor }
-			if = { limit = { has_game_rule = compulsory_primary_school }   activate_law = law_type:law_compulsory_primary_school }
-
+			if = {
+				limit = {
+					has_game_rule = child_labor_allowed
+				}
+				activate_law = law_type:law_child_labor_allowed
+			}
+			if = {
+				limit = {
+					has_game_rule = restricted_child_labor
+				}
+				activate_law = law_type:law_restricted_child_labor
+			}
+			if = {
+				limit = {
+					has_game_rule = compulsory_primary_school
+				}
+				activate_law = law_type:law_compulsory_primary_school
+			}
 			# === HEALTH SYSTEM ===
-			if = { limit = { has_game_rule = no_health_system }          activate_law = law_type:law_no_health_system }
-			if = { limit = { has_game_rule = charitable_health_system }  activate_law = law_type:law_charitable_health_system }
-			if = { limit = { has_game_rule = private_health_insurance }  activate_law = law_type:law_private_health_insurance }
-			if = { limit = { has_game_rule = public_health_insurance }   activate_law = law_type:law_public_health_insurance }
- 
+			if = {
+				limit = {
+					has_game_rule = no_health_system
+				}
+				activate_law = law_type:law_no_health_system
+			}
+			if = {
+				limit = {
+					has_game_rule = charitable_health_system
+				}
+				activate_law = law_type:law_charitable_health_system
+			}
+			if = {
+				limit = {
+					has_game_rule = private_health_insurance
+				}
+				activate_law = law_type:law_private_health_insurance
+			}
+			if = {
+				limit = {
+					has_game_rule = public_health_insurance
+				}
+				activate_law = law_type:law_public_health_insurance
+			}
 			# === LABOUR ASSOCIATIONS ===
-			if = { limit = { has_game_rule = guild_system }         activate_law = law_type:law_guild_system }
-			if = { limit = { has_game_rule = combination_acts }     activate_law = law_type:law_combination_acts }
-			if = { limit = { has_game_rule = anti_strike_laws }     activate_law = law_type:law_anti_strike_laws }
-			if = { limit = { has_game_rule = right_to_associate }   activate_law = law_type:law_right_to_associate }
-			if = { limit = { has_game_rule = corporatized_unions }  activate_law = law_type:law_corporatized_unions }
-			if = { limit = { has_game_rule = factory_councils }     activate_law = law_type:law_factory_councils }
- 
+			if = {
+				limit = {
+					has_game_rule = guild_system
+				}
+				activate_law = law_type:law_guild_system
+			}
+			if = {
+				limit = {
+					has_game_rule = combination_acts
+				}
+				activate_law = law_type:law_combination_acts
+			}
+			if = {
+				limit = {
+					has_game_rule = anti_strike_laws
+				}
+				activate_law = law_type:law_anti_strike_laws
+			}
+			if = {
+				limit = {
+					has_game_rule = right_to_associate
+				}
+				activate_law = law_type:law_right_to_associate
+			}
+			if = {
+				limit = {
+					has_game_rule = corporatized_unions
+				}
+				activate_law = law_type:law_corporatized_unions
+			}
+			if = {
+				limit = {
+					has_game_rule = factory_councils
+				}
+				activate_law = law_type:law_factory_councils
+			}
 			# === WELFARE ===
-			if = { limit = { has_game_rule = no_social_security }  activate_law = law_type:law_no_social_security }
-			if = { limit = { has_game_rule = poor_laws }           activate_law = law_type:law_poor_laws }
-			if = { limit = { has_game_rule = wage_subsidies }      activate_law = law_type:law_wage_subsidies }
-			if = { limit = { has_game_rule = old_age_pension }     activate_law = law_type:law_old_age_pension }
- 
- 
+			if = {
+				limit = {
+					has_game_rule = no_social_security
+				}
+				activate_law = law_type:law_no_social_security
+			}
+			if = {
+				limit = {
+					has_game_rule = poor_laws
+				}
+				activate_law = law_type:law_poor_laws
+			}
+			if = {
+				limit = {
+					has_game_rule = wage_subsidies
+				}
+				activate_law = law_type:law_wage_subsidies
+			}
+			if = {
+				limit = {
+					has_game_rule = old_age_pension
+				}
+				activate_law = law_type:law_old_age_pension
+			}
 		}
 	}
 }

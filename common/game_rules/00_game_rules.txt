@@ -1,9 +1,7 @@
 ﻿achievements = {
 	default = achievements_allowed
-
 	achievements_allowed = {
 	}
-
 	achievements_blocked = {
 		flag = blocks_achievements
 	}
@@ -11,14 +9,11 @@
 
 ai_behavior = {
 	default = standard_ai_behavior
-
 	lenient_ai_behavior = {
 		flag = lenient_ai
 	}
-
 	standard_ai_behavior = {
 	}
-
 	harsh_ai_behavior = {
 		flag = harsh_ai
 	}
@@ -26,14 +21,11 @@ ai_behavior = {
 
 ai_aggression = {
 	default = standard_ai_aggression
-
 	low_ai_aggression = {
 		flag = low_ai_aggression
 	}
-
 	standard_ai_aggression = {
 	}
-
 	high_ai_aggression = {
 		flag = high_ai_aggression
 	}
@@ -41,14 +33,11 @@ ai_aggression = {
 
 free_construction = {
 	default = free_construction_scaled_player_exemption
-
 	free_construction_scaled_all = {
 	}
-
 	free_construction_scaled_player_exemption = {
 		flag = free_construction_scaled_player_exemption
 	}
-
 	free_construction_unscaled = {
 		flag = free_construction_unscaled
 	}
@@ -56,39 +45,31 @@ free_construction = {
 
 formable_nations = {
 	default = all_formable_nations
-
 	all_formable_nations = {
 	}
-
 	plausible_formable_nations = {
 	}
 }
 
 releasable_nations = {
 	default = all_releasable_nations
-
 	all_releasable_nations = {
 	}
-
 	plausible_releasable_nations = {
 	}
 }
 
 loyalties_grace_period = {
 	default = loyalties_grace_period_none
-
 	loyalties_grace_period_none = {
 		flag = loyalties_grace_period_none
 	}
-
 	loyalties_grace_period_short = {
 		flag = loyalties_grace_period_short
 	}
-
 	loyalties_grace_period_long = {
 		flag = loyalties_grace_period_long
 	}
-
 	loyalties_grace_period_extra_long = {
 		flag = loyalties_grace_period_extra_long
 	}
@@ -96,22 +77,17 @@ loyalties_grace_period = {
 
 infamy_generation = {
 	default = infamy_generation_standard
-
 	infamy_generation_very_low = {
 		flag = infamy_generation_very_low
 	}
-
 	infamy_generation_low = {
 		flag = infamy_generation_low
 	}
-
 	infamy_generation_standard = {
 	}
-
 	infamy_generation_high = {
 		flag = infamy_generation_high
 	}
-
 	infamy_generation_very_high = {
 		flag = infamy_generation_very_high
 	}
@@ -119,19 +95,15 @@ infamy_generation = {
 
 pop_consolidation = {
 	default = moderate_consolidation
-
 	no_consolidation = {
 		flag = no_pop_consolidation
 	}
-
 	minor_consolidation = {
 		flag = minor_pop_consolidation
 	}
-
 	moderate_consolidation = {
 		flag = moderate_pop_consolidation
 	}
-
 	aggressive_consolidation = {
 		flag = aggressive_pop_consolidation
 	}
@@ -139,13 +111,11 @@ pop_consolidation = {
 
 monument_effects = {
 	default = allow_monument_effects
-
 	allow_monument_effects = {
 		flag = disable_pm_monument_prestige_only
 		flag = disable_pm_monument_no_effects
 		flag = disable_pm_power_bloc_prestige_only
 	}
-
 	prestige_only_monument_effects = {
 		flag = disable_pm_default_building_eiffel_tower
 		flag = disable_pm_default_building_angkor_wat
@@ -158,21 +128,16 @@ monument_effects = {
 		flag = disable_pm_default_building_taj_mahal
 		flag = disable_pm_default_building_vatican_city
 		flag = disable_pm_default_building_white_house
-
 		flag = disable_pm_monument_no_effects
-
 		flag = force_pm_monument_prestige_only
 		flag = force_pm_monument_prestige_only_vatican_city
-
 		flag = disable_pm_power_bloc_statue_religious
 		flag = disable_pm_power_bloc_statue_trade_league
 		flag = disable_pm_power_bloc_statue_military_treaty
 		flag = disable_pm_power_bloc_statue_ideological_union
 		flag = disable_pm_power_bloc_statue_sovereign_empire
-
 		flag = force_pm_power_bloc_prestige_only
 	}
-
 	no_monument_effects = {
 		flag = disable_pm_default_building_eiffel_tower
 		flag = disable_pm_default_building_angkor_wat
@@ -185,51 +150,41 @@ monument_effects = {
 		flag = disable_pm_default_building_taj_mahal
 		flag = disable_pm_default_building_vatican_city
 		flag = disable_pm_default_building_white_house
-
 		flag = disable_pm_monument_prestige_only
 		flag = disable_pm_monument_prestige_only_vatican_city
-
 		flag = disable_pm_power_bloc_prestige_only
-
 		flag = disable_pm_power_bloc_statue_religious
 		flag = disable_pm_power_bloc_statue_trade_league
 		flag = disable_pm_power_bloc_statue_military_treaty
 		flag = disable_pm_power_bloc_statue_ideological_union
 		flag = disable_pm_power_bloc_statue_sovereign_empire
-
 		flag = force_pm_monument_no_effects
 	}
 }
 
 subject_flags = {
 	default = allow_subject_flags
-
 	no_subject_flags = {
 		flag = no_subject_flags
 	}
-
 	allow_subject_flags = {
 	}
 }
 
 subject_map_color = {
 	default = allow_subject_map_color
-
 	no_subject_map_color = {
 		flag = no_subject_map_color
 	}
-
 	allow_subject_map_color = {
 	}
 }
 
 fantastical_content = {
 	default = allow_fantastical_content
-
 	allow_fantastical_content = {
 		flag = give_fantastical_content
 	}
-
 	no_fantastical_content = {
 		flag = no_fantastical_content
 	}
@@ -237,10 +192,8 @@ fantastical_content = {
 
 custom_rng_seed = {
 	default = no_custom_rng_seed
-
 	no_custom_rng_seed = {
 	}
-
 	use_custom_rng_seed = {
 		flag = use_custom_rng_seed
 	}
@@ -248,10 +201,8 @@ custom_rng_seed = {
 
 dynamic_naming = {
 	default = allow_dynamic_naming
-
 	allow_dynamic_naming = {
 	}
-
 	no_dynamic_naming = {
 		flag = no_dynamic_naming
 	}
@@ -259,12 +210,10 @@ dynamic_naming = {
 
 ruler_selector = {
 	default = no_ruler_selector
-
 	allow_ruler_selector = {
 		flag = give_ruler_selector
 		flag = blocks_achievements
 	}
-
 	no_ruler_selector = {
 		flag = no_ruler_selector
 	}
@@ -272,102 +221,201 @@ ruler_selector = {
 
 governance_principles = {
 	default = parliamentary_republic
-	monarchy = {flag = UNEmonarchy}
-	theocracy = {flag = UNEtheocracy}
-	presidential_republic = {flag = UNEpresidentialrepublic}
-	parliamentary_republic = {}
-	council_republic = {flag = UNEcouncilrepublic}
-	corporate_state = {flag = UNEcorporatestate}
-	social_monarchy = {flag = UNEsocialmonarchy}
-
+	parliamentary_republic = {
+	}
+	monarchy = {
+		flag = UNEmonarchy
+	}
+	theocracy = {
+		flag = UNEtheocracy
+	}
+	presidential_republic = {
+		flag = UNEpresidentialrepublic
+	}
+	council_republic = {
+		flag = UNEcouncilrepublic
+	}
+	corporate_state = {
+		flag = UNEcorporatestate
+	}
+	social_monarchy = {
+		flag = UNEsocialmonarchy
+	}
 }
 
 economic_system = {
 	default = interventionism
-	interventionism = {}
-	command_economy = {flag = UNEcommandeconomy}
-	cooperative_economy = {flag = UNEcooperativeeconomy}
-	laissez_faire = {flag = UNElaissezfaire}
-	agrarianism = {flag = UNEagrarianism}
+	interventionism = {
+	}
+	command_economy = {
+		flag = UNEcommandeconomy
+	}
+	cooperative_economy = {
+		flag = UNEcooperativeeconomy
+	}
+	laissez_faire = {
+		flag = UNElaissezfaire
+	}
+	agrarianism = {
+		flag = UNEagrarianism
+	}
 }
 
 distribution_of_power = {
-	default = technocracy 
-	autocracy = {flag = UNEautocracy}
-	oligarchy = {flag = UNEoligarchy}
-	landed_voting = {flag = UNElandedvoting}
-	wealth_voting = {flag = UNEwealthvoting}
-	census_voting = {flag = UNEcensusvoting}
-	universal_voting = {flag = UNEuniversalvoting}
-	single_party_state = {flag = UNEsinglepartystate}
-	labor_suffrage = {flag = UNElaborsuffrage}
-	technocracy = {}
+	default = technocracy
+	technocracy = {
+	}
+	autocracy = {
+		flag = UNEautocracy
+	}
+	oligarchy = {
+		flag = UNEoligarchy
+	}
+	landed_voting = {
+		flag = UNElandedvoting
+	}
+	wealth_voting = {
+		flag = UNEwealthvoting
+	}
+	census_voting = {
+		flag = UNEcensusvoting
+	}
+	universal_voting = {
+		flag = UNEuniversalvoting
+	}
+	single_party_state = {
+		flag = UNEsinglepartystate
+	}
+	labor_suffrage = {
+		flag = UNElaborsuffrage
+	}
 }
 
 land_reform = {
-	default = homesteading
-	tenant_farmers = { flag = UNEtenantfarmers}
-	homesteading = {}
-	collectivized_agriculture = {flag = UNEcollectivizedagriculture}
-	commercialized_agriculture = {flag = UNEcommercializedagriculture}
+	default = tenant_farmers
+	homesteading = {
+	}
+	tenant_farmers = {
+		flag = UNEtenantfarmers
+	}
+	collectivized_agriculture = {
+		flag = UNEcollectivizedagriculture
+	}
+	commercialized_agriculture = {
+		flag = UNEcommercializedagriculture
+	}
 }
 
 taxation_system = {
 	default = land_based_taxation
-	consumption_based_taxation = {flag = UNEconsumptiontaxation}
-	land_based_taxation = {}
-	per_capita_based_taxation = {flag = UNEpercapitataxation}
-	proportional_taxation = {flag = UNEproportionaltaxation}
-	graduated_taxation = {flag = UNEgraduatedtaxation}
+	consumption_based_taxation = {
+		flag = UNEconsumptiontaxation
+	}
+	land_based_taxation = {
+	}
+	per_capita_based_taxation = {
+		flag = UNEpercapitataxation
+	}
+	proportional_taxation = {
+		flag = UNEproportionaltaxation
+	}
+	graduated_taxation = {
+		flag = UNEgraduatedtaxation
+	}
 }
- 
+
 slavery_laws = {
 	default = legacy_slavery
-	slavery_banned = {flag = UNEslaverybanned}
-	colonial_slavery = {flag = UNEcolonialslavery}
-	debt_slavery = {flag = UNEdebtslavery}
-	slave_trade = {flag = UNEslavetrade}
-	legacy_slavery = {}
+	slavery_banned = {
+		flag = UNEslaverybanned
+	}
+	colonial_slavery = {
+		flag = UNEcolonialslavery
+	}
+	debt_slavery = {
+		flag = UNEdebtslavery
+	}
+	slave_trade = {
+		flag = UNEslavetrade
+	}
+	legacy_slavery = {
+	}
 }
- 
+
 womens_rights = {
 	default = no_womens_rights
-	no_womens_rights = {}
-	women_own_property = {flag = UNEwomenownproperty}
-	women_in_the_workplace = {flag = UNEwomeninworkplace}
-	womens_suffrage = {flag = UNEwomenssuffrage}
+	no_womens_rights = {
+	}
+	women_own_property = {
+		flag = UNEwomenownproperty
+	}
+	women_in_the_workplace = {
+		flag = UNEwomeninworkplace
+	}
+	womens_suffrage = {
+		flag = UNEwomenssuffrage
+	}
 }
- 
+
 childrens_rights = {
 	default = child_labor_allowed
-	child_labor_allowed = {}
-	restricted_child_labor = {flag = UNErestrictedchildlabor}
-	compulsory_primary_school = {flag = UNEcompulsoryprimaryschool}
+	child_labor_allowed = {
+	}
+	restricted_child_labor = {
+		flag = UNErestrictedchildlabor
+	}
+	compulsory_primary_school = {
+		flag = UNEcompulsoryprimaryschool
+	}
 }
- 
+
 health_system = {
 	default = public_health_insurance
-	no_health_system = {flag = UNEnohealthsystem}
-	charitable_health_system = {flag = UNEcharitablehealthsystem}
-	private_health_insurance = {flag = UNEprivatehealthinsurance}
-	public_health_insurance = {}
+	no_health_system = {
+		flag = UNEnohealthsystem
+	}
+	charitable_health_system = {
+		flag = UNEcharitablehealthsystem
+	}
+	private_health_insurance = {
+		flag = UNEprivatehealthinsurance
+	}
+	public_health_insurance = {
+	}
 }
- 
+
 labour_associations = {
-	default = right_to_associate
-	guild_system = {flag = UNEguildsystem}
-	combination_acts = {flag = UNEcombinationacts}
-	anti_strike_laws = {flag = UNEantistrikelaws}
-	right_to_associate = {}
-	corporatized_unions = {flag = UNEcorporatizedunions}
-	factory_councils = {flag = UNEfactorycouncils}
+	default = combination_acts
+	guild_system = {
+		flag = UNEguildsystem
+	}
+	combination_acts = {
+	}
+	anti_strike_laws = {
+		flag = UNEantistrikelaws
+	}
+	right_to_associate = {
+		flag = UNErighttoassociate
+	}
+	corporatized_unions = {
+		flag = UNEcorporatizedunions
+	}
+	factory_councils = {
+		flag = UNEfactorycouncils
+	}
 }
- 
+
 welfare_system = {
-	default = old_age_pension
-	no_social_security = {flag = UNEnosocialsecurity}
-	poor_laws = {flag = UNEpoorlaws}
-	wage_subsidies = {flag = UNEwagesubsidies}
-	old_age_pension = {}
+	default = no_social_security
+	no_social_security = {
+	}
+	poor_laws = {
+		flag = UNEpoorlaws
+	}
+	wage_subsidies = {
+		flag = UNEwagesubsidies
+	}
+	old_age_pension = {
+		flag = UNEoldagepension
+	}
 }
- 

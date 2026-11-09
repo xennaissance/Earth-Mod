@@ -1,12 +1,137 @@
-UNE_default = { # The country tag (e.g., FRA for France)
-    pattern = "pattern_solid.tga" # The basic background split
-    color1 = "blue"
-    
-    textured_emblem = { # Adds an icon layer on top
-        texture = "flag_human_9.dds"
+﻿UNE_default = {
+	# The country tag (e.g., FRA for France)
+	pattern = "pattern_solid.tga"	# The basic background split
+	color1 = "blue"
+	textured_emblem = {
+		# Adds an icon layer on top
+		texture = "flag_human_9.dds"
+		instance = {
+			position = {
+				0.5
+				0.5
+			}			# Centers the crown (X and Y coordinates from 0 to 1)
+			scale = {
+				0.6
+				0.6
+			}			# Resizes the icon
+		}
+	}
+}
+
+commonwealth_of_man = {
+	pattern = "pattern_solid.tga"
+	color1 = "red_dark"
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "black"
+		color2 = "red_dark"
+	}
+	textured_emblem = {
+		texture = "flag_human_4.dds"
+		instance = {
+			position = {
+				0.5
+				0.5
+			}
+			scale = {
+				0.6
+				0.6
+			}
+		}
+	}
+}
+
+united_citizen_federation = {
+	# 1. Main Background: A blue saltire on a green field
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+	# 2. White Outlines around the diagonal stripes
+	# Because pattern_saltire doesn't natively support multiple thick border borders,
+	# we layer a slightly larger white saltire behind/around it, or use fimbriation emblems.
+	colored_emblem = {
+		texture = "pattern_saltire.dds"
+		color2 = "blue"		# Saltire color
+	}
+	colored_emblem = {
+		texture = "ce_saltire_fimbriated.dds"
+		color1 = "white"
+		color2 = "blue"
+	}
+	# 3. Central Roundel Base (The dark blue circle with its white border)
+    colored_emblem = {
+		texture = "ce_frame_circle_outline.dds"
+		color1 = "white"		# Outer ring outline
+		instance = {
+			scale = {
+				0.7
+				0.7
+			}
+			position = {
+				0.5
+				0.5
+			}
+		}
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "blue"		# Outer ring outline
+		instance = {
+			scale = {
+				0.65
+				0.65
+			}
+			position = {
+				0.5
+				0.5
+			}
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = "blue"		# Inner filled circle
+		color2 = "blue"
+		instance = {
+			scale = {
+				0.6
+				0.6
+			}
+			position = {
+				0.5
+				0.5
+			}
+		}
+	}
+	# 4. Central Charge (The Eagle/Thunderbird Emblem)
+	# You'll use either a textured custom asset or a close matching base-game stylized eagle
+	colored_emblem = {
+		texture = "ce_eagle_legless.dds"		# Point this path to your mod's stylized eagle .dds file
+		color1 = "white"
+        color2 = "white"
         instance = {
-            position = { 0.5 0.5 } # Centers the crown (X and Y coordinates from 0 to 1)
-            scale = { 0.6 0.6 }    # Resizes the icon
-        }
-    }
+			scale = {
+				0.52
+				0.52
+			}
+			position = {
+				0.5
+				0.5
+			}
+		}
+	}
+}
+
+imperium_of_man = {
+	pattern = "pattern_solid.tga"
+	color1 = "RaptorImperialis"
+
+	colored_emblem = {
+		texture = "ce_eagle_double_headed.dds"
+		color1 = "yellow"       # Primary gold color
+		color2 = "yellow_dark"  # Shading/accent color if supported by the asset
+		instance = {
+			position = { 0.5 0.5 }
+			scale = { 0.8 0.8 }
+		}
+	}
 }

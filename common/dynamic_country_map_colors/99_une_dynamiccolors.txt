@@ -1,8 +1,53 @@
 #you must define new colors in common/named_colors to use them here
+# you can use coa_def_ideology_triggers here, look at /common/dynamic_country_map_colors/00_default.txt
 UNE_socialist = {
 	color = "swr_red"
 	possible = {
 		c:UNE ?= this
-		has_law_or_variant = law_type:law_council_republic 
+		has_law_or_variant = law_type:law_council_republic
+	}
+}
+
+UNE_autocratic = {
+	color = "paneuropa_grey"
+	possible = {
+		c:UNE ?= this
+		AND = {
+			OR = {
+				has_law_or_variant = law_type:law_autocracy
+				has_law_or_variant = law_type:law_single_party_state
+			}
+
+			OR = {
+				has_law_or_variant = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_parliamentary_republic
+			}
+		}
+	}
+}
+
+
+UNE_fascist = {
+	color = "UnitedCitizenFederationBlue"
+	possible = {
+		c:UNE ?= this
+		coa_fascist_trigger = yes
+	}
+}
+
+UNE_monarchy = {
+	color = "earth_kingdom_green"
+
+	possible = {
+		c:UNE ?= this
+		coa_monarchy_trigger = yes
+	}
+}
+
+UNE_theocracy = {
+	color = "RaptorImperialis"
+	possible ={
+		c:UNE ?= this
+		coa_theocracy_trigger = yes
 	}
 }

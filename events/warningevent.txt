@@ -27,6 +27,10 @@ UNE.1 = {
 			years = 20
 			is_decaying = yes
 		}
+		add_modifier = {
+			name = empire_mandate_growth
+			years = -1
+		}
         # Add effects for clicking the button here
     }
 
@@ -39,6 +43,10 @@ UNE.1 = {
 			years = 20
 			is_decaying = yes
 		}
+		add_modifier = {
+			name = empire_mandate_growth
+			years = -1
+		}
 	}
 
 	option = {
@@ -48,6 +56,10 @@ UNE.1 = {
 			name = empire_integration_grace_period 
 			years = 20
 			is_decaying = yes
+		}
+		add_modifier = {
+			name = empire_mandate_growth
+			years = -1
 		}
 	}
 }

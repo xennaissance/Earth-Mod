@@ -1,6 +1,6 @@
 UNE = {
-	#definitions from flags go here
-	# the actually flags go to common/coat_of_arms/coat_of_arms
+	#definitions for flags go here
+	# the actual flags go to common/coat_of_arms/coat_of_arms
 	#dynamic naming happens at common/dynamic_country_names
 	flag_definition = {
 		coa = socialist_world_republic
@@ -11,28 +11,35 @@ UNE = {
 	}
 	flag_definition = {
 		coa = united_citizen_federation
-		priority = 1500
+		priority = 2000
 		trigger = {
-			coa_def_fascist_flag_trigger = yes
+				coa_def_fascist_flag_trigger = yes
+			
+			
+		}
+	}
+	flag_definition = {
+		coa = TPG_earth_kingdom
+		priority = 500
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
 		}
 	}
 	flag_definition = {
 		coa = imperium_of_man
 		priority = 1500
 		trigger = {
-			OR = {
-				coa_def_monarchy_flag_trigger = yes
-				coa_def_theocracy_flag_trigger = yes
-			}
+			coa_def_theocracy_flag_trigger = yes
 		}
 	}
-
 	flag_definition = {
 		coa = commonwealth_of_man
-		prirority = 1500
+		priority = 1500
 		trigger = {
-			coa_def_autocracy_flag_trigger = yes 
-			coa_def_republic_flag_trigger = yes
+			OR = {
+				coa_def_dictatorship_flag_trigger = yes
+				coa_def_fascist_flag_trigger = yes
+			}
 		}
 	}
 	flag_definition = {
