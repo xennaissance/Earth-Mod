@@ -1,0 +1,16 @@
+﻿# Final: mass migration off + almost no push states; Greener Grass decree states pull. Replaces all earlier 99_zz_ test files.
+# Decree states still pull (+200 via the Greener Grass override).
+NPops = {
+	BUCKET_MIGRATION_THRESHOLD = 2000000000	# vanilla 1000
+	BUCKET_MIGRATION_MIN_LEFTOVER_THRESHOLD = 2000000000	# vanilla 1000
+
+	MARKET_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 150	# vanilla 5, perf file 25
+
+	# Push side
+	MIGRATION_PULL_LOW_THRESHOLD = 0.001	# vanilla 0.75 (test E used 0.05)
+	MIGRATION_MIN_STATE_POPS = 100000	# vanilla 20000 (test E used 1000000)
+	MIGRATION_MAX_PER_STATE_UNEMPLOYMENT_ORIGIN_FRACTION = 0	# vanilla 0.05: unemployed no longer add emigration room
+
+	# Volume (Texas test showed only ~16 people a week)
+	MARKET_MIGRATION_PER_WEEK_FACTOR = 50	# vanilla 5
+}
