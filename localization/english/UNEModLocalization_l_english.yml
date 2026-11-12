@@ -187,3 +187,17 @@
   dyn_c_UNE_theocracy: "Imperium of Man"
   dyn_c_UNE_fascist: "United Citizen Federation"
   dyn_c_UNE_monarchy: "Earth Kingdom"
+
+  #=== Human Settings
+  rule_une_pop_culture:0 "Pop Cultures"
+  rule_une_pop_culture_desc:0 "Whether the world's pops keep their original cultures or all become Human. Fewer cultures means fewer pops, which makes the game run faster."
+  setting_human_culture_for_all:0 "Everyone is Human"
+  setting_human_culture_for_all_desc:0 "At the start of the game every pop becomes Human. Best performance."
+  setting_original_cultures:0 "Original cultures"
+  setting_original_cultures_desc:0 "Pops keep their historical cultures. More pops, so more lag."
+  rule_une_pop_religion:0 "Pop Religions"
+  rule_une_pop_religion_desc:0 "Whether the world's pops keep their original religions or all start Atheist. Fewer religions means fewer pops, which makes the game run faster."
+  setting_atheist_religion_for_all:0 "Everyone is Atheist"
+  setting_atheist_religion_for_all_desc:0 "At the start of the game every pop becomes Atheist. Best performance."
+  setting_original_religions:0 "Original religions"
+  setting_original_religions_desc:0 "Pops keep their historical religions. More pops, so more lag."

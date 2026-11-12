@@ -1,0 +1,8 @@
+﻿# One-country world: there are no neighbouring countries or wars. REPLACE: overrides the vanilla trigger without copying the whole file.
+REPLACE:neighboring_country_has_insurrectionary_movement_trigger = {
+	always = no
+}
+
+REPLACE:pressing_liberation_wargoal_against_adjacent_country = {
+	always = no
+}

@@ -1,0 +1,23 @@
+﻿une_pop_culture = {
+	default = human_culture_for_all
+
+	human_culture_for_all = {
+		flag = une_human_culture_for_all
+	}
+
+	original_cultures = {
+		flag = une_original_cultures
+	}
+}
+
+une_pop_religion = {
+	default = atheist_religion_for_all
+
+	atheist_religion_for_all = {
+		flag = une_atheist_religion_for_all
+	}
+
+	original_religions = {
+		flag = une_original_religions
+	}
+}

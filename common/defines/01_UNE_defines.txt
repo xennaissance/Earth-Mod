@@ -2,3 +2,12 @@ NAI = {
 	CONSTRUCTION_MAX_NUM_PRODUCTION_BUILDING_CONSTRUCTIONS_SCALED_MAX = 9999	# CONSTRUCTION_MAX_NUM_PRODUCTION_BUILDING_CONSTRUCTIONS_SCALED can't be higher than this
 	CONSTRUCTION_MAX_NUM_GOVERNMENT_BUILDING_CONSTRUCTIONS_SCALED_MAX = 999 # CONSTRUCTION_MAX_NUM_GOVERNMENT_CONSTRUCTIONS_SCALED can't be higher than this
 }
+
+NPops = {
+	# UNE perf: one-country world, one market. Throttle the weekly economic migration pass.
+	MARKET_MIGRATION_MIN_DIFFERENCE_IN_MIGRATION_ATTRACTION_TO_MOVE = 25	# vanilla 5, self explanatory
+	MARKET_MIGRATION_MIN_POP_FRACTION_TO_MOVE = 0.05	# REVERTED : vanilla 0.05 (25% of a pop group must move at once if they mvoe at all, might be too high)
+	MARKET_MIGRATION_STATE_ATTRACTION_FRACTION = 0.9	# vanilla 0.75
+	MIGRATION_MIN_STATE_POPS = 100000	# you need 100k pops in a state before you can immigrate out
+	MIGRATION_PULL_HIGH_THRESHOLD = 3.0	# vanilla 1.25: only far-above-average states (Greener Grass decree states) receive market immigration / you need a state 3x better than average.
+}

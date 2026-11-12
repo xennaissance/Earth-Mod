@@ -1,0 +1,36 @@
+﻿# Both fire from on_game_started (add them to the on_actions list in 00_clear_military_startup.txt)
+earth_unify_pop_culture = {
+	effect = {
+		if = {
+			limit = {
+				has_game_rule = human_culture_for_all
+			}
+			every_state = {
+				every_scope_pop = {
+					change_pop_culture = {
+						target = cu:human
+						value = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+earth_unify_pop_religion = {
+	effect = {
+		if = {
+			limit = {
+				has_game_rule = atheist_religion_for_all
+			}
+			every_state = {
+				every_scope_pop = {
+					change_pop_religion = {
+						target = rel:atheist
+						value = 1
+					}
+				}
+			}
+		}
+	}
+}

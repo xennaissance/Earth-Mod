@@ -3,6 +3,8 @@ on_game_started = {
 	on_actions = {
 		earth_mod_clear_military_on_action
 		earth_law_making
+		earth_unify_pop_culture
+		earth_unify_pop_religion
 	}
 }
 
